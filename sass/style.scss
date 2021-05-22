@@ -1,11 +1,29 @@
 $font-family: 'Playfair Display', serif;
 
-$color-one: red;
-$color-two: yellow;
-$color-three: pink;
-$color-four: green;
+$color-one: #FED136;
+$color-two: #000000;
+$color-three: rgb(255, 255, 255);
+$color-four: #818181;
+$color-six: rgb(247, 247, 247);
 
-.header {
+.body {
+    font-family: $font-family;
+    margin: 0;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    z-index: 1;
+}
+
+header h1 {
+    color: $color-one;
+    font-style: italic;
+}
+
+header {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -14,15 +32,11 @@ $color-four: green;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background: grey;
     }
-
-h1 {
-    background: red;
-}
+    
 
 .navigation {
-    background: greenyellow;
+   color: $color-three;
     padding-top: 25px;
 }
 
@@ -44,7 +58,7 @@ h1 {
 }
 
 .navigation a:hover {
-    color: black;
+    color: $color-one;
 }
 
 .navigation ul ul li {
@@ -54,7 +68,6 @@ h1 {
 
 .navigation li ul {
     display: none;
-    background-color: purple;
     Z-index: 1;
 }
 
@@ -75,7 +88,9 @@ h1 {
     color: $color-one;
     padding: 0 24px;
 }
-  
+
+/* Splash */
+
 .splash::after {
     position: absolute;
     content: '';
@@ -115,53 +130,58 @@ h1 {
 .splash i {
     border-radius: 50%;
     font-size: 30px;
-    background: $color-one;
     width: 60px;
     height: 60px;
     line-height: 60px;
-    color: $color-two;
+    color: $color-one;
+    transition: 1s;
+    border: solid 1px $color-one;
 }
 
 .page-title {
-    font-size: 80px;
+    font-size: 38px;
     margin: 48px 0 0 0;
     color: $color-three;
     position: relative;
-    font:$font-family;
+    font-family:$font-family;
     text-align: center;
+    transition: 1s;
+    font-style: italic;
 } 
 
 .page-title:hover {
-    color: $color-four;
-    transition: 1s;
-   
+    color: $color-one;
 }
 
 .page-subtitle {
-    color: $color-two;
-    font-size: 32px;
+    color: $color-three;
+    font-size: 80px;
     margin: 48px 0 0 0;
-   
+    transition: 1s;
 }
 
 .page-subtitle:hover {
-    color: $color-three;
-    transition: 1s;
+    color: $color-one;
+    
 }
 
 .btn {
     text-decoration: none;
     display: inline-block;
-    border: solid 5px gold;
+    border: solid 2px gold;
     margin-top: 50px;
     padding: 32px 46px;
     font-size: 45px;
+    transition: 1s;
+    color: $color-three;
 }
 
 .btn:hover {
     background-position: 0 100%;
     color: $color-one;
 }
+
+/* Service */
 
 .section-title {
     text-align: center;
@@ -174,7 +194,7 @@ h1 {
 
 .section-subtitle {
     text-align: center;
-    color: rgb(119, 119, 119);
+    color: $color-two;
     line-height: 1.2;
     font-style: italic;
     margin-bottom: 50px;
@@ -182,62 +202,119 @@ h1 {
 }
 
   .section-element i {
-    background-color: rgb(254, 209, 54);
     border-radius: 50%;
     font-size: 30px;
     width: 60px;
-    height: 60px;
     line-height: 60px;
     margin: 0 40%;
     padding: 0 15px;
-    color: $color-two;
+    color: $color-one;
+    border: solid 2px $color-one;
+    transition: 1s;
   }
-  
+
+  .service {
+      padding: 80px 80px;
+  }
+
+  .section-subtitle-1 {
+    color:$color-four;
+    text-align: center;
+    font-style: italic;
+
+  }
+  .service-text {
+      color: $color-four;
+
+  }
   .row img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 350px;
+    padding: 0 5px;
+   
+    
 }
-
+.box {
+    border: solid 2px red;
+    background: white;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
 .bread {
     margin: 50px;
 }
 
-.row {
-    margin: 10% 0;
-}
+/* Gallery */
 
 .title-gallery {
     text-align: center;
 }
 
-.gallery-item p {
-   color: red;
-   text-align: center;
+.gallery {
+    background: $color-six;
+    padding: 80px 80px;
+
 }
+
+.gallery h3 {
+    color: $color-four;
+}
+
+
+.gallery-item {
+  
+margin: 10px 0;
+    background: white;
+}
+ 
+.gallery-item p {
+   color: $color-four;
+   font-style: italic;
+
+   text-align: center;
+   margin-bottom: 40px;
+}
+
+.gallery-item h5 {
+    font-size: 30px;
+    margin: 20px 0 0 0;
+}
+
+
+/* Footer */
 
 .page-footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    object-fit: cover;
+    text-align: center;
+    margin-top: 15px;
+
+   
     li {
         display: inline-block;
         font-size: 0;
         margin: 0 50px;
+        text-decoration: none;
     }
+
     i {
         display: flex;
         justify-content: space-around;
         padding: 15px 15px;
         font-size: 24px;
         width: 60px;
-        height: 60px;
+        line-height: 30px;
         background: $color-two;
         border-radius: 60px;
         color: $color-one;
-        text-decoration: none;
         transition: 1s;
+    }
+
+    a {
+        text-decoration: none;
     }
 }
 
