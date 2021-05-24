@@ -10,10 +10,28 @@ $color-six: rgb(247, 247, 247);
 $font-size-one: 30px;
 $font-size-two: 38px;
 $font-size-three: 80px;
+$font-size-four: 24px;
 
 body {
     font-family: $font-text;
     margin: 0;
+}
+
+.section-title {
+    text-align: center;
+    margin: 24px;
+    color: $color-two;
+    line-height: 1.2;
+    font-size: $font-size-two;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: $color-four;
+    line-height: 1.2;
+    font-style: italic;
+    margin-bottom: 50px;
+    font-style: italic;
 }
 
 /* Header */
@@ -35,7 +53,11 @@ header {
         font-style: italic;
     }
 }
-    
+
+.container-fluid {
+    padding: 0;
+}
+
 .navigation {
     color: $color-three;
     padding-top: 25px;
@@ -55,6 +77,7 @@ header {
     a {
         text-decoration: none;
         color: $color-three;
+        transition: 1s;
     }
 
     ul li {
@@ -143,30 +166,24 @@ header {
 .btn {
     text-decoration: none;
     display: inline-block;
-    border: solid 2px $color-one;
     margin-top: 50px;
-    padding: 32px 46px;
-    font-size: $font-size-two;
-    transition: 1s;
+    padding: 20px 46px;
+    font-size: $font-size-four;
     color: $color-three;
+    background: $color-one;
+    border-radius: 3px;
+    border: solid 1px $color-three;
+    transition: 1s;
 }
 
 .btn:hover {
     background-position: 0 100%;
-    color: $color-one;
+    color: $color-two;
 }
 
 /* Service */
 
-.section-title {
-    text-align: center;
-    margin: 24px;
-    color: $color-two;
-    line-height: 1.2;
-    font-size: $font-size-two;
-}
-
-.section-subtitle {
+.service-element {
     text-align: center;
     color: $color-two;
     line-height: 1.2;
@@ -175,27 +192,27 @@ header {
     font-style: italic;
 }
 
+/*
+.section-element {
+    text-align: center;
+}
+*/
 .section-element i {
     border-radius: 50%;
-    font-size: 30px$;
+    font-size: 30px;
     width: 60px;
     height: 60px;
     text-align: center;
-    margin: 0 40%;
+    margin: 0 auto;
     color: $color-one;
     border: solid 2px $color-one;
     transition: 1s;
     padding: 13px;
+    display: block;
 }
 
 .service {
     padding: 80px 80px;
-}
-
-.section-subtitle-1 {
-    color:$color-four;
-    text-align: center;
-    font-style: italic;
 }
 
 .service-text {
@@ -208,9 +225,6 @@ header {
     height: 350px;
 }
 
-.bread {
-    margin: 50px;
-}
 
 /* Gallery */
 
@@ -231,6 +245,7 @@ header {
     margin: 10px 0;
     background: $color-three;
     padding-bottom: 1px;
+    margin-bottom: 40px;
 }
  
 .gallery-item p {
@@ -240,24 +255,37 @@ header {
    margin-bottom: 40px;
 }
 
-.gallery-item h5 {
-    font-size: $font-size-two;
+.gallery-item h4 {
+    font-size: $font-size-one;
     margin: 20px 0 0 0;
 }
 
 /* Footer */
 
-.page-footer {
+.footer-element {
+    text-align: center;
+    margin: 0 80px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    p {
+    color: $color-four;
+    }
+}
+
+.page-footer {
+    flex-wrap: wrap;
     text-align: center;
     margin-top: 15px;
    
     li {
         display: inline-block;
         font-size: 0;
-        margin: 0 50px;
+        margin: 0 15px;
         text-decoration: none;
     }
 
@@ -297,16 +325,16 @@ header {
     }
 
     .btn {
-        font-size: 28px;
+        font-size: 14px;
         margin: 30px 0 20px 0;
         padding: 20px;
     }
 
-    .splash-inner h1 {
+    .splash-inner h2 {
         font-size: 20px;
     }
 
-    .splash-inner h2 {
+    .splash-inner h3 {
         font-size: 36px;
     }
 
@@ -322,6 +350,7 @@ header {
     .footer-icons {
         padding: 0;
         margin: 0;
+        display: inherit;
         
         li {
             margin: 10px;
