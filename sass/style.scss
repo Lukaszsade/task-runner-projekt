@@ -235,6 +235,7 @@ header {
 .gallery {
     background: $color-six;
     padding: 80px 80px;
+    overflow-x: hidden;
 
     h3 {
         color: $color-four;
@@ -338,19 +339,28 @@ header {
         font-size: 36px;
     }
 
+    .section-title {
+        margin-top: 60px;
+    }
+
     .gallery {
         padding: 0;
     }
 
     .gallery h2 {
-        margin-top: 20px;
+        margin-top: 60px;
         text-align: center;
     }
-
+    .footer-element {
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+    }
     .footer-icons {
         padding: 0;
         margin: 0;
-        display: inherit;
+        
+        
         
         li {
             margin: 10px;
